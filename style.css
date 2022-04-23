@@ -54,10 +54,21 @@ a {
   font-size: 2rem;
 }
 .work{
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 100px;
+  align-items: center;*/
+  padding: 100px; 
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+}
+@media (max-width:670px) {
+  .work{
+    display: grid;
+    padding: 15px;
+    grid-template-columns: auto;
+  }
 }
 .work .card{
   align-items: center;
@@ -108,6 +119,11 @@ a {
   left: 0;
   opacity: 0;
   cursor: pointer;
+}
+@media (max-width:670px) {
+  .wrapper .file-upload{
+    width:fit-content;
+  }
 }
 .wrapper .file-upload:hover {
   background-position: 0 -100%;
